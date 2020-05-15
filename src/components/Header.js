@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import AuthContext from "../hooks/AuthContext";
 
+// Import Components
+import Logout from "./logout";
+
 const Header = ({ handleLogout }) => {
   const user = useContext(AuthContext);
 
   return (
     <div>
       Hello {user.username}
-      <button onClick={handleLogout}>Logout</button>
+      <Logout handleLogout={handleLogout} />
     </div>
   );
 };
